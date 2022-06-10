@@ -8,7 +8,7 @@ Example for create new table or add on table
 fetch("https://examplename.vercel.app/api/create", {
   method: "POST",
   headers: new Headers({
-    authorization: "Bearer abcb0dea85221344afabb1f0b2d5d6015b98c0f7",
+    authorization: "Bearer 7f59ba5f69d5b4e588e0ab0d4f8e1634",
   }),
   body: JSON.stringify({
     table: {
