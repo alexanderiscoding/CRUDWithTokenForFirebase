@@ -1,24 +1,22 @@
 ## 🚀 Usage
 
-Exemplo de post com jQuery
+Example for create new table or add on table
 
 ```js
-$.post("https://examplename.vercel.app/api/post", { 
-    request: 'Name for Request',
-    url: window.location.href,
-    date: new Date().getTime()
-});
-```
-
-Exemplo de post com Fetch
-
-```js
-fetch('https://examplename.vercel.app/api/post', {
-    method: 'POST',
-    body: JSON.stringify({ 
-        request: 'Name for Request',
-        url: window.location.href,
-        date: new Date().getTime() 
-    })
+fetch("https://examplename.vercel.app/api/create", {
+  method: "POST",
+  headers: new Headers({
+    authorization: "Bearer abcb0dea85221344afabb1f0b2d5d6015b98c0f7",
+  }),
+  body: JSON.stringify({
+    table: {
+      name: "test",
+    },
+    column: {
+      english_title: "Cupid's Kitchen",
+      display_title: "A Cozinha de Cupido",
+      original_title: "舌尖上的心跳",
+    },
+  }),
 });
 ```
