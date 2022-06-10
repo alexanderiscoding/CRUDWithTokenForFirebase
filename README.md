@@ -1,6 +1,8 @@
 ## 🚀 Usage
 
-Example for create new table or add on table
+Change after **Bearer** for same token from firebaseConfig.js
+
+Example for create new table or add on table 
 
 ```js
 fetch("https://examplename.vercel.app/api/create", {
@@ -10,7 +12,7 @@ fetch("https://examplename.vercel.app/api/create", {
   }),
   body: JSON.stringify({
     table: {
-      name: "test",
+      name: "YouDramaList",
     },
     column: {
       english_title: "Cupid's Kitchen",
