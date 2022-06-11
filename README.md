@@ -1,5 +1,9 @@
 ## 🚀 Usage
 
+Download Admin SDK Firebase for Node.js in Account Service from Project Settings
+
+Change filename to serviceAccountKey.json and save in base project
+
 Change after **Bearer** for same token from firebaseConfig.js
 
 Example for create new table or add on table
