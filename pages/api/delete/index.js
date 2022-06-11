@@ -15,6 +15,16 @@ export default async(req, res) => {
 			[req.body.column.name]: fieldValue.delete()
 		});
 		res.status(200).send("Field successfully deleted!");
+	}else if(req.body.column.where === "true"){
+		const table = db.collection(req.body.table.name);
+		const snapshot = await table.where(req.body.column.name, req.body.column.operator, req.body.column.value).get();
+		if (snapshot.empty) {
+			return res.status(400).send("No matching documents.");
+		}
+		snapshot.forEach(doc => {
+			db.collection(req.body.table.name).doc(doc.id).delete();
+		});
+		res.status(200).send("All documents successfully deleted!");
 	}else{
 		await db.collection(req.body.table.name).doc(req.body.column.id).delete();
 		res.status(200).send("Document successfully deleted!");
