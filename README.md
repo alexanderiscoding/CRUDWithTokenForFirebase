@@ -63,6 +63,28 @@ fetch("https://examplename.vercel.app/api/delete", {
 });
 ```
 
+Example for delete for list document from [operators](https://firebase.google.com/docs/firestore/query-data/queries#query_operators)
+
+```js
+fetch("https://examplename.vercel.app/api/delete", {
+  method: "POST",
+  headers: new Headers({
+    authorization: "Bearer 7f59ba5f69d5b4e588e0ab0d4f8e1634",
+  }),
+  body: JSON.stringify({
+    table: {
+      name: "YouDramaList"
+    },
+    column: {
+      where: "true",
+      name: "display_title",
+      operator: "==",
+      value: "A Cozinha de Cupido"
+    },
+  }),
+});
+```
+
 Example for read document
 
 ```js
