@@ -11,6 +11,7 @@ if (!admin.apps.length) {
   }
 }
 export const db = admin.firestore();
+export const fieldValue = admin.firestore.FieldValue;
 // for token 32 caracters https://generate-secret.vercel.app/32
 // for token 64 caracters https://generate-secret.vercel.app/64
 // please change this token by an example above
