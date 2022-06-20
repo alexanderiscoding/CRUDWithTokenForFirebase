@@ -10,8 +10,8 @@ export default async(req, res) => {
 		return res.status(401).json({ message: 'Invalid Authentication Credentials' });
 	}
 	if(req.body.column.delete === "true"){
-		const table = db.collection(req.body.table.name).doc(req.body.column.id);
-		await table.update({
+		const docTable = db.collection(req.body.table.name).doc(req.body.column.id);
+		await docTable.update({
 			[req.body.column.name]: fieldValue.delete()
 		});
 		res.status(200).send("Field successfully deleted!");
