@@ -21,8 +21,8 @@ export default async(req, res) => {
 		});
 		res.status(200).send(alldocdata);
 	}else{
-		const cityRef = db.collection(req.body.table.name).doc(req.body.column.id);
-		const doc = await cityRef.get();
+		const docTable = db.collection(req.body.table.name).doc(req.body.column.id);
+		const doc = await docTable.get();
 		if (!doc.exists) {
 			res.status(400).send("No such document!");
 		} else {
