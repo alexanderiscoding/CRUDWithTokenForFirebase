@@ -190,5 +190,5 @@ fetch("https://examplename.vercel.app/api/decrypt", {
     },
   }),
 });
-
+```
 For example in PHP view LoginWithAPI.php in [AuthWithTokenForEmail](https://github.com/alexanderiscoding/AuthWithTokenForEmail)
