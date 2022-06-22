@@ -6,7 +6,7 @@ Change filename to serviceAccountKey.json and save in base project
 
 Change after **Bearer** for same token from firebaseConfig.js
 
-Example for create new table or add on table
+Example for create new table
 
 ```js
 fetch("https://examplename.vercel.app/api/create", {
